@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Pin-Match</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+		integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+	<link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+	<!-- CALCULATOR -->
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="pin-generator half-width">
+					<input id="displayOne" class="form-control text-center" type="text" placeholder="GENERATE PIN">
+					<button id="generate" class="generate-btn">Generate Pin</button>
+				</div>
+			</div>
+			<!-- CALCULATOR FORM -->
+			<div class="col-md-6">
+				<div class="input-section half-width">
+					<!-- CALCULATOR ROW -->
+					<div class="calculator__row">
+						<input id="displayTwo" class="calculator__display text-center" type="text"
+							placeholder="INPUT PIN" />
+					</div>
+					<div class="numbers calc-body" id="button">
+						<!-- CALCULATOR ROW -->
+						<div class="calculator__row">
+							<button type="button" value="9" class="calculator__key calculator__button"></button>
+							<button type="button" value="8" class="calculator__key calculator__button"></button>
+							<button type="button" value="7" class="calculator__key calculator__button"></button>
+						</div>
+						<!-- CALCULATOR ROW -->
+						<div class="calculator__row">
+							<button type="button" value="6" class="calculator__key calculator__button"></button>
+							<button type="button" value="5" class="calculator__key calculator__button"></button>
+							<button type="button" value="4" class="calculator__key calculator__button"></button>
+						</div>
+						<!-- CALCULATOR ROW -->
+						<div class="calculator__row">
+							<button type="button" value="3" class="calculator__key calculator__button"></button>
+							<button type="button" value="2" class="calculator__key calculator__button"></button>
+							<button type="button" value="1" class="calculator__key calculator__button"></button>
+						</div>
+						<!-- CALCULATOR ROW -->
+						<div class="calculator__row">
+							<button type="button" value="<" class="calculator__key calculator__backspace"></button>
+							<button type="button" value="0" class="calculator__key calculator__button"></button>
+							<button type="button" value="C" class="calculator__key calculator__clear"></button>
+						</div>
+						<div>
+							<button id="submit" type="button" class="submit-btn" onclick="myFunction()">Submit</button>
+							<p class="action-left">3 try left</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="notify-id" class="notify-section" onclick="hideDiv()">
+			<p id="unmatch" class="notify">❌ Pin Didn't Match, Please try again</p>
+			<p id="match" class="notify">✅ Pin Matched... Secret door is opening for you</p>
+		</div>
+	</div>
+	<script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+	<script src="./script.js"></script>
+</body>
+
+</html>
