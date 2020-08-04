@@ -55,11 +55,13 @@ submitBtn.addEventListener("click", function myFunction() {
     let inputPin = document.getElementById("displayTwo").value;
 
     //create for loop to choose password characters
-    if (generatePin.length == 4 && inputPin == generatePin) {
-        document.getElementById("match").style.visibility = "visible";
+    if (generatePin == inputPin) {
+        document.getElementById("match").style.display = "block";
+        document.getElementById("unmatch").style.display = "none";
 
     } else {
-        document.getElementById("unmatch").style.visibility = "visible";
+        document.getElementById("unmatch").style.display = "block";
+        document.getElementById("match").style.display = "none";
 
     }
 });
